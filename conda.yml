@@ -1,0 +1,20 @@
+name: golf-cv
+channels:
+  - defaults
+  - pytorch
+dependencies:
+  - numpy=1.26
+  - opencv=4.10
+  - pandas=2.2.2
+  - pillow=10.4.0
+  - pip=24.2
+  - python=3.12
+  - pytorch=2.5
+  - torchvision=0.20
+  - tqdm=4.66
+  - pip:
+      - mmcv==2.1.0
+      - mmdet==3.3.0
+      - mmengine==0.10.5
+      - mmpose==1.3.2
+      - streamlit==1.39.0
