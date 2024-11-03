@@ -32,8 +32,6 @@ def render_keypoint_line_plots(video_id: str):
         "Below we can see the predicted keypoint positions for each frame in the video."
     )
 
-    print("loading keypoints for video: ", video_id)
-
     poses = load_poses(f"data/predictions/{video_id}.json")
     keypoints = get_keypoints(poses)
 
@@ -49,6 +47,7 @@ def render_keypoint_line_plots(video_id: str):
 
 
 def main():
+    st.set_page_config(page_title="Golf CV")
     render_top_text()
     selected_video_id = render_video_selection()
     render_keypoint_line_plots(selected_video_id)
