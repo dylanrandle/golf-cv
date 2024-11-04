@@ -39,6 +39,7 @@ def render_keypoint_line_plots(video_id: str):
         axis_keypoints = pd.DataFrame(
             keypoints[:, :, axis_idx], columns=KEYPOINT_TO_DESCRIPTION_MAP.values()
         )
+        # TODO: fix legend off edges
         st.line_chart(
             axis_keypoints,
             x_label="Frame Index",
@@ -51,6 +52,7 @@ def main():
     render_top_text()
     selected_video_id = render_video_selection()
     render_keypoint_line_plots(selected_video_id)
+    st.info("This is a work in progress. Check back soon!")
 
 
 if __name__ == "__main__":
